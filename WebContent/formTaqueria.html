@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Taquerits - Nueva taqueria</title>
+</head>
+<body>
+	<h2>Nueva taqueria</h2>
+	<form action="taqueria" method="POST">
+		<div>
+			<label for="txtNombre">Nombre</label>
+			<input type="text" name="txtNombre" id="txtNombre">
+		</div>
+		<div>
+			<label for="txtPopularidad">Popularidad</label>
+			<select id="txtPopularidad" name="txtPopularidad">
+				<option value="1">Muy mala </option>
+				<option value="2">Mala </option>
+				<option value="3">Buena </option>
+				<option value="4">Muy buena </option>
+				<option value="5">Excelente </option>
+			</select>
+		</div>
+		<div>
+			<label>Nivel limpieza</label>
+			<select id="txtNivelLimpieza" name="txtNivelLimpieza">
+				<option value="1">Asqueroso</option>
+				<option value="2">Sucio</option>
+				<option value="3">Pasable</option>
+				<option value="4">Limpio</option>
+				<option value="5">Impecable</option>
+			</select>
+		</div>
+		<div>
+			<label for="txtUbicacion">Ubicación</label>
+			<input type="text" id="txtUbicacion" name="txtUbicacion">
+		</div>
+		<div>
+			<label for="txtOlor">Olor</label>
+			<select id="txtOlor" name="txtOlor">
+				<option value="1">Rayos</option>
+				<option value="2">Centellas</option>
+				<option value="3">Pasable</option>
+				<option value="4">Bonito</option>
+				<option value="5">Rikolino</option>
+			</select>
+		</div>
+		<button type="submit" value="Enviar">Enviar</button>
+	</form>
+	<a href="index.html">Regresar</a>
+</body>
+</html>
