@@ -5,7 +5,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class DatabaseConnection {
-	private static final String JDBC_URL_FORMAT = "jdbc:%s://%s:%s/%s";
+	private static final String JDBC_URL_FORMAT = "jdbc:%s://%s:%s/%s?serverTimezone=UTC";
 	
 	public static Connection getConnection() {
 		
@@ -16,12 +16,13 @@ public class DatabaseConnection {
 		String url = String.format(JDBC_URL_FORMAT, dbms, host, port, databaseName);
 		String user = "root";
 		String password = "root";
-		
+		System.out.println(url);
 		Connection connection = null;
 		
 		try {
 			//Registrar driver
 			Class.forName("com.mysql.cj.jdbc.Driver");
+			
 			connection = DriverManager.getConnection(url, user, password);
 			}catch (ClassNotFoundException e) {
 				e.printStackTrace();
